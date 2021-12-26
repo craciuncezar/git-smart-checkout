@@ -11,6 +11,15 @@ struct GitBranch {
     selected: bool,
 }
 
+impl Clone for GitBranch {
+    fn clone(&self) -> Self {
+        GitBranch {
+            name: self.name.clone(),
+            selected: self.selected,
+        }
+    }
+}
+
 impl Display for GitBranch {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         if self.selected {
@@ -22,7 +31,7 @@ impl Display for GitBranch {
 }
 
 fn main() {
-    let branches = get_git_branches();
+    let branches = hoist_selected_branch(get_git_branches());
 
     let selection = FuzzySelect::with_theme(&ColorfulTheme::default())
         .with_prompt("Fuzzy search git branches")
@@ -74,6 +83,12 @@ fn get_git_branches() -> Vec<GitBranch> {
             }
         })
         .collect()
+}
+
+fn hoist_selected_branch(branches: Vec<GitBranch>) -> Vec<GitBranch> {
+    let mut sorted_branches = branches.to_vec();
+    sorted_branches.sort_by(|a, b| b.selected.cmp(&a.selected));
+    return sorted_branches;
 }
 
 fn switch_to_branch(branch: &GitBranch) -> Output {
