@@ -4,11 +4,11 @@ mod interactions;
 
 fn main() {
     let branches = utils::hoist_selected_branch(GitClient::get_git_branches());
-    let selected_branch = interactions::select_branch(&branches);
+    let selected_branch: &str = interactions::select_branch(&branches);
 
     if selected_branch.selected {
         println!("You are already on branch {}", selected_branch.name);
-        return
+        return;
     }
 
     let switch_branch = GitClient::switch_to_branch(&selected_branch);
