@@ -8,7 +8,7 @@ fn main() {
 
     if selected_branch.selected {
         println!("You are already on branch {}", selected_branch.name);
-        return
+        return;
     }
 
     let switch_branch = GitClient::switch_to_branch(&selected_branch);
