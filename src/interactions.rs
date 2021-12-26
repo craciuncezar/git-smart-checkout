@@ -4,7 +4,7 @@ use crate::git_client::GitBranch;
 
 pub fn select_branch(branches: &Vec<GitBranch>) -> &GitBranch {
     let selection_index = FuzzySelect::with_theme(&ColorfulTheme::default())
-        .with_prompt("Fuzzy search git branches")
+        .with_prompt("Search git branch by name")
         .default(0)
         .items(&branches[..])
         .interact()
