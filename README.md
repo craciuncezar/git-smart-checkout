@@ -4,6 +4,8 @@
 
 All powered by the speed ⚡️ of rust 🦀
 
+![Demo](https://raw.githubusercontent.com/craciuncezar/smart-checkout/main/.github/images/demo.gif)
+
 ## Installation
 
 ### Cargo
