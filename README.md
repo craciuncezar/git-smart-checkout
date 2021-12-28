@@ -1,10 +1,23 @@
-# smart-checkout
+<div align="center">
+<h1>smart-checkout</h1>
 
-🧠 A cli tool for a better way of switching git branches. Interactively switch branches or fuzzy search for that forgotten branch name.
+<p>
+  A cli tool for a better way of switching git branches.
 
-All powered by the speed ⚡️ of rust 🦀
+</p>
 
+![brain](https://user-images.githubusercontent.com/27342306/147604624-9d62c8ca-d2f2-42a3-973e-4341a09b0d23.png)
+  
 ![Demo](https://raw.githubusercontent.com/craciuncezar/smart-checkout/main/.github/images/demo.gif)
+
+  
+</div>
+
+## About
+
+Interactively switch branches or fuzzy search for that forgotten branch name. 
+
+All powered by the speed ⚡️ of rust 🦀.
 
 ## Installation
 
