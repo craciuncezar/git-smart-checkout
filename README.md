@@ -9,8 +9,8 @@
 ![brain](https://user-images.githubusercontent.com/27342306/147604624-9d62c8ca-d2f2-42a3-973e-4341a09b0d23.png)
 <br>
   
-[![Crates.io](https://img.shields.io/crates/v/smart-checkout.svg)](https://crates.io/crates/smart-checkout)
-[![License](https://img.shields.io/crates/l/smart-checkout.svg)](./LICENSE)
+[![Crates.io](https://img.shields.io/crates/v/git-smart-checkout.svg)](https://crates.io/crates/git-smart-checkout)
+[![License](https://img.shields.io/crates/l/git-smart-checkout.svg)](./LICENSE)
 
 ![Demo](https://raw.githubusercontent.com/craciuncezar/smart-checkout/main/.github/images/demo.gif)
 
