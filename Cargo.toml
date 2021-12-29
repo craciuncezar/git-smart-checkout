@@ -1,5 +1,5 @@
 [package]
-name = "smart-checkout"
+name = "git-smart-checkout"
 version = "0.1.0"
 authors = ["Cezar Craciun"]
 description = """
