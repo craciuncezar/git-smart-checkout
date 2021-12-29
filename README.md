@@ -32,7 +32,7 @@ cargo install git-smart-checkout
 For Homebrew users, you can install the binary using the following command:
 
 ```sh
-brew tap craciuncezar/git-smart-checkout
+brew tap craciuncezar/tap
 brew install git-smart-checkout
 ```
 
