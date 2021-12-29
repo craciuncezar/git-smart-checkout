@@ -1,5 +1,5 @@
 <div align="center">
-<h1>smart-checkout</h1>
+<h1>git-smart-checkout</h1>
 
 <p>
   A cli tool for a better way of switching git branches.
