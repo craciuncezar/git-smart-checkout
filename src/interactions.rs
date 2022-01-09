@@ -1,8 +1,8 @@
 use dialoguer::{theme::ColorfulTheme, Confirm, FuzzySelect};
 
-use crate::git_client::GitBranch;
+use crate::git::Branch;
 
-pub fn select_branch(branches: &Vec<GitBranch>) -> &GitBranch {
+pub fn select_branch(branches: &Vec<Branch>) -> &Branch {
     let selection_index = FuzzySelect::with_theme(&ColorfulTheme::default())
         .with_prompt("Search git branch by name")
         .default(0)

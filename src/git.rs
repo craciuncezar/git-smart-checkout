@@ -1,13 +1,16 @@
+pub mod client;
+pub mod utils;
+
 use dialoguer::console::style;
 use std::fmt::{self, Display};
 
 #[derive(Clone)]
-pub struct GitBranch {
+pub struct Branch {
     pub name: String,
     pub selected: bool,
 }
 
-impl Display for GitBranch {
+impl Display for Branch {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         if self.selected {
             return write!(f, "{} (current)", style(&self.name).underlined().green());

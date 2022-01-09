@@ -1,8 +1,6 @@
-mod git_branch;
-pub use git_branch::GitBranch;
 use std::process::{Command, Output};
 
-pub mod utils;
+use super::GitBranch;
 
 pub fn switch_to_branch(branch: &GitBranch) -> Output {
     Command::new("git")
