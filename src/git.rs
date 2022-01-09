@@ -1,6 +1,10 @@
+pub mod client;
+pub mod utils;
+
 use dialoguer::console::style;
 use std::fmt::{self, Display};
 
+#[derive(Clone)]
 pub struct GitBranch {
     pub name: String,
     pub selected: bool,
@@ -13,14 +17,5 @@ impl Display for GitBranch {
         }
 
         write!(f, "{}", self.name)
-    }
-}
-
-impl Clone for GitBranch {
-    fn clone(&self) -> Self {
-        GitBranch {
-            name: self.name.clone(),
-            selected: self.selected,
-        }
     }
 }
