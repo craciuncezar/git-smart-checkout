@@ -42,6 +42,16 @@ You can also install the binary directly from GitHub Releases
 curl -sSL https://github.com/craciuncezar/git-smart-checkout/releases/download/v0.1.0/git-smart-checkout -o /usr/local/bin/git-smart-checkout && chmod +x /usr/local/bin/git-smart-checkout
 ```
 
+## Usage
+
+Start by running:
+
+```sh
+git smart-checkout
+```
+
+Once the interactive window is visible you can navigate with keyboard arrows `↑` or `↓` and select the git branch you are looking for by pressing `Enter`. If you know the name of the branch you can start typing to search for that particular branch, the search is using a fuzzy algorithm so you don't need to match the exact name of the branch it will also match partial terms.
+
 ### Git alias
 
 To save typing time you can use a regular git alias for `git smart-checkout`. The following command will add the alias `git sc` to your git config, however feel free to use whatever works best for you:
