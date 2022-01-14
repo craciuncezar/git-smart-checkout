@@ -7,7 +7,7 @@ pub fn select_branch(branches: &[GitBranch]) -> Result<&GitBranch> {
     let selection_index = FuzzySelect::with_theme(&ColorfulTheme::default())
         .with_prompt("Search git branch by name")
         .default(0)
-        .items(&branches[..])
+        .items(branches)
         .interact()?;
     Ok(&branches[selection_index])
 }

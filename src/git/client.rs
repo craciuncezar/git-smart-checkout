@@ -28,10 +28,10 @@ pub fn get_git_branches() -> Vec<GitBranch> {
     git_branch_stdout
         .lines()
         .map(|branch| {
-            if branch.starts_with("*") {
+            if let Some(stripped) = branch.strip_prefix('*') {
                 return GitBranch {
                     selected: true,
-                    name: String::from(branch[1..].trim()),
+                    name: String::from(stripped.trim()),
                 };
             }
 

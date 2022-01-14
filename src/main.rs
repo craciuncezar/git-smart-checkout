@@ -15,7 +15,7 @@ fn main() {
         return;
     }
 
-    let switch_branch = git::client::switch_to_branch(&selected_branch);
+    let switch_branch = git::client::switch_to_branch(selected_branch);
 
     if !switch_branch.stderr.is_empty() {
         let error = String::from_utf8_lossy(&switch_branch.stderr);
@@ -26,7 +26,7 @@ fn main() {
             });
             if should_stash {
                 git::client::stash_git_changes();
-                git::client::switch_to_branch(&selected_branch);
+                git::client::switch_to_branch(selected_branch);
             }
         };
     }
