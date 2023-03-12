@@ -4,7 +4,7 @@ mod interactions;
 fn main() {
     ctrlc::set_handler(show_cursor).unwrap();
 
-    let branches = git::utils::hoist_selected_branch(git::client::get_git_branches());
+    let branches = git::client::get_sorted_git_branches();
     let selected_branch = interactions::select_branch(&branches).unwrap_or_else(|_| {
         show_cursor();
         std::process::exit(0);
